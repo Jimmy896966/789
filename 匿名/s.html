@@ -125,7 +125,7 @@
                 })
                 .catch(error => {
                     console.error('Error fetching IP info:', error);
-                    document.getElementById('ip-info').textContent = '無法獲取 IP 信息';
+                    document.getElementById('ip-info').textContent = '';
                 });
         }
 
@@ -192,7 +192,7 @@
             .then(response => {
                 document.getElementById('loading').style.display = 'none';
                 if (response.ok) {
-                    showStatus('投稿成功發送到 Discord！', true);
+                    showStatus('匿名成功發送到 ', true);
                     document.getElementById('submission-content').value = '';
                     document.getElementById('submission-title').value = '';
                     document.getElementById('image-upload').value = '';
